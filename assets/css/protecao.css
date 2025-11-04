@@ -10,6 +10,7 @@
             line-height: 1.6;
             color: #333;
             background-color: #f8f9fa;
+              overflow-x: hidden; /* evita scroll horizontal indesejado */
         }
 
         
@@ -305,29 +306,7 @@
             transform: perspective(2500px) rotateY(0);
         }
 
-        /* ===== RESPONSIVE ===== */
-        @media (max-width: 768px) {
-            .hero-section {
-                padding: 2rem 0;
-            }
-            
-            .display-4 {
-                font-size: 2rem;
-            }
-            
-            .scam-timeline:before {
-                left: 20px;
-            }
-            
-            .timeline-item {
-                padding-left: 60px;
-            }
-            
-            .timeline-item:before {
-                left: 12px;
-            }
-        }
-
+    
         /* ===== GARANTIR TEXTO VISÍVEL ===== */
         .hero-section h1,
         .hero-section p,
@@ -346,3 +325,4 @@
             opacity: 1 !important;
             color: inherit !important;
         }
+

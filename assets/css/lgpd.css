@@ -2,9 +2,9 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f8f9fa;
-  margin: 0;
-  padding: 0;
   scroll-behavior: smooth;
+  overflow-x: hidden; /* evita scroll horizontal indesejado */
+
 }
 
 /* Navbar LGPD igual ao index */
@@ -163,21 +163,50 @@ footer {
 }
 
 /* Responsividade */
+@media (max-width: 968px) {
+  .lgpd-header h1 {
+    font-size: 2rem;
+  }
+  .timeline {
+    padding-left: 19px;
+  }
+  .timeline-content {
+    padding-left: 16px;
+  }
+}
 @media (max-width: 768px) {
   .lgpd-header h1 {
     font-size: 2rem;
   }
-
-  .lgpd-header p {
-    font-size: 1rem;
-  }
-
   .timeline {
-    padding-left: 20px;
+    padding-left: 19px;
   }
-
   .timeline-content {
-    padding-left: 30px;
+    padding-left: 16px;
   }
 }
+@media (max-width: 500px) {
+  .navbar .navbar-nav .nav-link {
+        margin-left: 0.3rem;
+        font-size: 0.8rem;
+    }
+    .navbar .navbar-nav .nav-link {
+        margin-left: 0.5rem;
+        font-size: 0.9rem;
+    }
+    .lgpd-header h1 {
+        font-size: 1.8rem;
+    }
+    .lgpd-header p {
+        font-size: 1rem;
+    }
+    .timeline {
+        padding-left: 20px;
+    }
+    .timeline-content {
+        padding-left: 20px;
+    }
+}
+
+
 
