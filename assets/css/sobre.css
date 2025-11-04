@@ -5,7 +5,6 @@
   --branco: #ffffff;
   --cinza-fundo: #f5f6fa;
   --texto: #222;
-  --navbar-height: 64px; /* altura da navbar fixa */
 }
 
 /* Reset básico + espaço para navbar fixa */
@@ -18,36 +17,23 @@ body {
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
   margin: 0;
-  /* Espaço superior para navbar fixa */
-  padding-top: var(--navbar-height);
+  /* Layout igual às outras páginas: sem espaçamento extra para navbar fixa */
+  padding-top: 40px;
 }
 
-/* NAVBAR fixa e acessível */
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: var(--navbar-height);
-  display: flex;
-  align-items: center;
-  padding: 0 16px;
-  z-index: 1100;
-  background: linear-gradient(90deg, var(--azul-escuro), var(--roxo-suave));
-  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
-}
-.navbar .navbar-brand { color: var(--branco) !important; font-weight:700; display:flex; align-items:center; gap:0.5rem; }
-.navbar .navbar-brand i { font-size:1.05rem; line-height:1; }
-.navbar .navbar-toggler { margin-left: auto; }
-.navbar .navbar-nav { gap: 0.25rem; align-items:center; }
-.navbar .nav-link {
-  color: rgba(255,255,255,0.9) !important;
-  text-decoration: none;
-  padding: 3px;
-}
-.navbar .nav-link:hover,
-.navbar .nav-link:focus { color: var(--dourado) !important; outline: none; }
-
+ /* Navbar */
+    .navbar {
+      background: linear-gradient(90deg, var(--azul-escuro), var(--roxo-suave));
+      box-shadow: 0 2px 10px rgba(0,0,0,0.25);
+      min-height: 55px; /* Adiciona altura mínima */
+    }
+    .navbar-brand, .nav-link {
+      color: var(--branco) !important;
+      transition: color 0.3s ease;
+    }
+    .nav-link:hover {
+      color: var(--dourado) !important;
+    }
 /* HERO (abaixo da navbar) */
 .page-hero {
   background: linear-gradient(135deg, rgba(30,60,114,0.92), rgba(42,82,152,0.92));
@@ -130,8 +116,7 @@ footer .list-unstyled a:hover { color: var(--dourado); text-decoration: underlin
 
 /* Responsividade */
 @media (max-width: 900px){
-  /* manter altura da navbar consistente para evitar espaço indesejado */
-  :root { --navbar-height: 56px; }
+  /* responsividade - ajustes do hero/painel */
 
   /* ajustar hero e painel sem introduzir margens/paddings errados */
   .page-hero {
@@ -147,10 +132,7 @@ footer .list-unstyled a:hover { color: var(--dourado); text-decoration: underlin
 }
 
 @media (max-width: 600px){
-  :root { --navbar-height: 56px; }
-
-  /* garantir que o conteúdo não tenha padding extra além da altura da navbar */
-  body { padding-top: var(--navbar-height); }
+  /* pequeno ajuste de tamanhos e margens em telas muito pequenas */
 
   .page-hero h1 { font-size: 1.9rem; }
   .panel { margin: -28px 12px 40px; padding: 14px; }
