@@ -140,7 +140,7 @@ footer .list-unstyled a:hover { color: var(--dourado); text-decoration: underlin
   }
 
   .panel {
-    margin: -40px 12px 40px; /* mantém sobreposição com o hero sem criar gap */
+    margin: -20px 12px 40px; /* mantém sobreposição com o hero sem criar gap */
     padding: 16px;
     border-radius: 10px;
   }
