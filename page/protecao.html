@@ -442,24 +442,5 @@
             });
         });
     </script>
-
-            <!-- Diagnostic: detect elements wider than viewport (temporary) -->
-            <script>
-                (function(){
-                    const over = [];
-                    document.querySelectorAll('body *').forEach(el => {
-                        try{
-                            const r = el.getBoundingClientRect();
-                            if (r.width > (window.innerWidth - 1)) {
-                                over.push({ tag: el.tagName, id: el.id || null, cls: el.className || null, width: Math.round(r.width) });
-                                el.style.outline = '3px solid rgba(255,0,0,0.75)';
-                            }
-                        }catch(e){/* ignore */}
-                    });
-                    console.group('DIAGNOSTIC overflow elements');
-                    if (over.length) console.table(over); else console.log('no overflow elements detected');
-                    console.groupEnd();
-                })();
-            </script>
 </body>
 </html>
