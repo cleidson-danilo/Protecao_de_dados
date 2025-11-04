@@ -4,7 +4,6 @@ body {
   background-color: #f8f9fa;
   scroll-behavior: smooth;
   overflow-x: hidden; /* evita scroll horizontal indesejado */
-
 }
 
 /* Navbar LGPD igual ao index */

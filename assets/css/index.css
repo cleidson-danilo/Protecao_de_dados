@@ -8,6 +8,7 @@
       --texto: #222;
     }
 
+    
     body {
       background-color: var(--cinza-fundo);
       color: var(--texto);
